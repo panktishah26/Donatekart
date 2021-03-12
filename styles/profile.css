@@ -1,6 +1,7 @@
 main{
     min-height: 83vh;
     margin-top: 64px;
+	background-color: #c1e0ea;
 }
 .hdr{
     min-width: 100vw;
