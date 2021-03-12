@@ -1,0 +1,227 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        crossorigin="anonymous">
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/common.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="#">Donatekart</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active hide" id="prfllnk">
+                        <a class="btn btn-lg btn-primary" href="/profile">Profile<span class="sr-only">(current)</span></a>
+                    </li>
+					<li class="nav-item active hide" id="signupngo">
+                        <a href="/add_ngo" class="btn btn-lg btn-primary hide" id="sign-up-btn">Sign Up NGO</a>
+                    </li>&nbsp;&nbsp;&nbsp;
+					<li class="nav-item active" id="signupuser">
+                        <a class="btn btn-lg btn-primary hide" href="/signup" role="button" id="signup-btn">Sign up User</a>
+                    </li>
+                </ul>
+                <div class="form-inline mt-2 mt-md-0" id="log_container">
+                    <!--<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+                    <a href="#" class="btn btn-lg btn-primary hide" id="logout-btn">Logout</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active page1"></li>
+                <li data-target="#myCarousel" data-slide-to="1" class="page2"></li>
+                <li data-target="#myCarousel" data-slide-to="2" class="page3"></li>
+            </ol>
+            <div class="carousel-inner car1">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="carousel-caption text-left">
+                            <h1>Donatekart</h1>
+                            <p>Charity begins at home but should not end there.</p>
+                            <p><a class="btn btn-lg btn-primary hide" href="/signup" role="button" id="signup-btn">Sign up User</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Donatekart</h1>
+                            <p>Giving to those in need will bring more joy than money could ever buy.</p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    
+                    <div class="container">
+                        <div class="carousel-caption text-right">
+                            <h1>Donatekart</h1>
+                            <p>Happiness can be the result, not of spending more money on oneself, but rather of giving money away to others.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+
+        <!-- Marketing messaging and featurettes
+          ================================================== -->
+        <!-- Wrap the rest of the page in another container to center all the content. -->
+
+        <div class="container marketing">
+
+            
+
+            <!-- START THE FEATURETTES -->
+
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Crisis Text Line <br/><span class="text-muted">
+                        We represent the biosphere
+                    </span></h2>
+                    <p class="lead">When people need to talk to a crisis counselor ASAP, Crisis Text Line offers free 24/7 support. Anyone can text 741741 from anywhere in the US to be connected to a trained crisis counselor, which is an especially helpful resource for people struggling with anxiety and depression during the COVID-19 pandemic.
+                        </p>
+                </div>
+                <div class="col-md-5">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                        height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
+                        focusable="false" role="img" aria-label="Placeholder: 500x500">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#eee" />
+                        <image href="/imgs/crisis.jpg"></image>
+                    </svg>
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading">Relief International <br/><span class="text-muted">
+                        Mission Statement.</span></h2>
+                    <p class="lead">This nonprofit works in 16 different countries to provide food, education, and medical care to “people in the world’s most fragile settings.” Now, its workers are building isolation and treatment centers in refugee camps for COVID-19 patients, delivering care packages to the homes of refugees, and opening more health clinics. ​</p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                        height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
+                        focusable="false" role="img" aria-label="Placeholder: 500x500">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#eee" />
+                        <image href="/imgs/relief.jpg"></image>
+                    </svg>
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Silicon Valley Leadership Group <span class="text-muted">Delivering International Aid.</span></h2>
+                    <p class="lead">We want to acknowledge the tough decisions and sacrifices that each of you are making to protect the health of our community and limit the spread of the COVID-19 pandemic. While times may be uncertain, one thing that remains certain is the Office of Cultural Affairs commitment to San Jose’s arts and culture community.</p>
+                </div>
+                <div class="col-md-5">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                        height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
+                        focusable="false" role="img" aria-label="Placeholder: 500x500">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#eee" />
+                        <image href="/imgs/donate4.jpg"></image>
+                    </svg>
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+			
+			<!-- Three columns of text below the carousel -->
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="/imgs/donate3.jfif">
+                        
+                </img>
+                    <h2>Experience More Pleasure</h2>
+                    <p>According to a research, who chose to donate a portion of $100 they were provided enjoyed activated pleasure centers in the brain.</p>
+                    <p></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="/imgs/donate2.jfif">
+                        
+                </img>
+                    <h2>Bring More Meaning to Your Life</h2>
+                    <p>When you donate money to charity, you create opportunities to meet new people who believe in the same causes that inspire you. 
+						That, and making a real impact on those causes, can infuse your everyday life with more meaning.					
+                    </p>
+                    <p></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="/imgs/donate1.png">
+                        
+                </img>
+                    <h2>Realize that Every Little Bit Helps</h2>
+                    <p>You don’t need $10,000 to make a difference in someone’s life. In developing countries, even just a few U.S. dollars could result in a week’s worth of meals for a starving child, much-needed medical attention, and even improved schooling.
+                    </p>
+                    <p></p>
+                </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+<hr class="featurette-divider">
+            <!-- /END THE FEATURETTES -->
+
+        </div><!-- /.container -->
+
+
+        <!-- FOOTER -->
+        <footer class="container">
+            <p class="float-right"><a href="#">Back to top</a></p>
+            <p>&copy; 2021 Donatekart. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        </footer>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        crossorigin="anonymous">
+    </script>
+    <script src="/js/home_foot.js"></script>
+    <script src="/js/common.js"></script>
+</body>
+
+</html>

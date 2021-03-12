@@ -1,0 +1,206 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        crossorigin="anonymous">
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="/styles/profile.css">
+    <link rel="stylesheet" href="/styles/common.css">
+    <script>
+        function gotoprofile(){
+            window.location.href='/profile'
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="/home">Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active" id="prfllnk">
+                        <a class="btn btn-lg btn-primary" href="/profile">Profile<span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+                <div class="form-inline mt-2 mt-md-0">
+                    <a href="#" class="btn btn-lg btn-primary" id="logout-btn">Logout</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        <div class="spinner-wrapper" id="myspinner">
+            <div class="loader">Loading...</div>
+        </div>
+        <div class="spinner-wrapper text-center hide" id="done_container">
+            <img id="done_class" src="https://cdn1.iconfinder.com/data/icons/color-bold-style/21/34-512.png" height="100px"/><br/>
+            <p style="color: green;"><h2>Done!</h2></p>
+        </div>
+
+        <!-- Marketing messaging and featurettes
+          ================================================== -->
+        <!-- Wrap the rest of the page in another container to center all the content. -->
+
+        <div class="container hdr">
+            <div class="row">
+                <div class="col-md-3">
+
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="/imgs/user-logo.webp" height="150" />
+                    <h1 id="user_name"></h1>
+                    <div class="row text-center hide" id="user_button">
+                        <div class="col">
+                            <button type="button" class="btn btn-light" id="show_search">Events</button>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-light" id="_fav">Donate</button>
+                        </div>
+                    </div>
+                    <div class="row text-center hide" id="ngo_buttons">
+                        <div class="col">
+                            <button type="button" class="btn btn-light" id="accept_donation_btn">Accept</button>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-light" onclick="gotoprofile();">Post Event</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                        
+                </div>
+            </div>
+            <hr />
+            <div class="container">
+                <div id="event_row" class="hide">
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10 text-center">
+                            <h3>Donation Event</h3>
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                            <ul class="list-group" id="int-events">
+
+                            </ul>
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+                </div>
+
+                <!--list all fav for donations-->
+                <div class="row hide" id="show_fav_ngo_row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10">
+                        <h3 class="text-center">Help the community</h3>
+                        <div class="container" id="fav_ngo_list">
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+
+                <!--Search NGOs-->
+                <div id="search_row" class="hide">
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10 text-center">
+                            <input id="ngoname" class="form-control rounded" placeholder="NGO Name" /><br /><br />
+                            <button type="button" class="btn btn-primary" id="search_ngo_btn">Search</button>
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+                    <br /><br />
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                            <ul class="list-group" id="seach_results">
+
+                            </ul>
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+                </div>
+
+                <!--Add new events here-->
+                <div class="row hide" id="add_event_row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10 text-center">
+                        <h3>Post an event</h3>
+                        <input id="subject" placeholder="Subject line" /><br /><br />
+                        <textarea id="description" placeholder="description"></textarea><br /><br />
+                        <button type="button" class="btn btn-primary" id="add_event_btn">Submit</button>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+
+                 <!-- show donations to accept -->
+                 <div class="row hide" id="incoming_don">
+                    <h3 class="text-center">Pending Donations</h3>
+                    <table class="table">
+                        <thead class=".thead-dark">
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody id="in_don_body">
+                          
+                        </tbody>
+                      </table>
+                </div>
+
+
+            </div>
+
+        </div><!-- /.container -->
+
+    </main>
+    <!-- FOOTER -->
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <p class="float-right"><a href="#">Back to top</a></p>
+            <p>&copy; 2021 Donatekart. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        crossorigin="anonymous">
+    </script>
+    <script src="/js/profile_foot.js"></script>
+    <script src="/js/common.js"></script>
+</body>
+
+</html>
