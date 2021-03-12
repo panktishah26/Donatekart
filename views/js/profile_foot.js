@@ -18,7 +18,7 @@ $(document).ready(() => {
                 if (res && res.events && res.events.length > 0) {
                     res.events.map((key, idx) => {
                         $('#int-events').append(`
-                <li class="list-group-item list-group-item-info">
+                <li class="list-group-item list-group-item-primary">
                 <h3>${key.subject}</h3>    
                 <h6>${key.ngoName}</h6>
                 <p>${key.description}</p>
@@ -108,7 +108,7 @@ $('#search_ngo_btn').click(() => {
         if (res && res.ngos && res.ngos.length > 0) {
             res.ngos.map((key, idx) => {
                 $('#seach_results').append(`
-                <li class="list-group-item list-group-item-info">
+                <li class="list-group-item list-group-item-primary">
                     <a href="/ngo_profile?ngo_id=${key.ngoId}">${key.ngoname}</a>
                     <button type="button" class="btn add-fav btn-primary list-group-item-primary srch-res-btn" data-ngoId="${key.ngoId}">Add</button>
                 </li>`)
